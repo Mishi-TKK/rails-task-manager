@@ -8,3 +8,12 @@
 </li>
 <% end %>
 </ul>
+<% @tasks.each do |task| %>
+  <div>
+    <h3><%= task.title %></h3>
+    <p><%= task.details %></p>
+    <p><%= task.completed ? "Completed" : "Not Completed" %></p>
+
+    <%= link_to 'Edit', edit_task_path(task) %> <!-- Link to the edit page -->
+  </div>
+<% end %>
