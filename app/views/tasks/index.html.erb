@@ -4,6 +4,7 @@
 <li>
 <strong>Task:</strong> <%= task.title %> <br>
 <strong>Details:</strong> <%= task.details %>
+<%= link_to 'View Task Details', task_path(task) %>
 </li>
 <% end %>
 </ul>
