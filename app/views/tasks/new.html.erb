@@ -1,0 +1,19 @@
+<h1>Create a New Task</h1>
+
+<%= form_with model: @task, url: tasks_path, method: :post do |form| %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title, required: true %>
+  </div>
+
+  <div>
+    <%= form.label :details %>
+    <%= form.text_area :details, required: true %>
+  </div>
+
+  <div>
+    <%= form.submit 'Create Task' %>
+  </div>
+<% end %>
+
+<%= link_to 'Back to Task List', tasks_path %>
